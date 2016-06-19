@@ -1,7 +1,7 @@
 //Main Transcompiler file
 var ast = require("./ast.js");
 
-function tokenize(code){
+var tokenize = function(code){
 	var tokens = [];
 	var splits = code.split(/(".*?")|,|(@[a-zA-Z]+)|([a-zA-Z]+)|([0-9]+)|\(|\)|(\[)|(\])|(\{)|(\})| /);
 	for(var i=0;i<splits.length;i++){
@@ -13,6 +13,5 @@ function tokenize(code){
 }
 
 exports.tokenize = tokenize;
-var d = tokenize("vote(@foo, foo(5))")
+var d = tokenize("vote(@foo, foo(doom(5, 4)))")
 console.log(d)
-console.log(JSON.stringify(ast.makeAST(d)))
