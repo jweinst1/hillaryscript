@@ -1,5 +1,5 @@
 //Main Transcompiler file
-var ast = require("./ast.js");
+var prs = require("./parser.js");
 
 var tokenize = function(code){
 	var tokens = [];
@@ -11,7 +11,16 @@ var tokenize = function(code){
 	}
 	return tokens;
 }
-
 exports.tokenize = tokenize;
-var d = tokenize("vote(@foo, foo(doom(5, 4)))")
-console.log(d)
+
+
+var Transcompile = function(code){
+	var tokens = tokenize(code);
+	var parser = new prs.Parser();
+	for(var i=tokens.length-1;i>=0;i-=1){
+		parser.acceptToken(tokens[i]);
+	}
+	return parser.get(0);
+}
+
+console.log(Transcompile("vote(@doo, tax(add(5, 9), add(4, 5, 3)))"));
