@@ -23,4 +23,4 @@ var Transcompile = function(code){
 	return parser.get(0);
 }
 
-console.log(Transcompile("vote(@doo, tax(add(5, 9), add(4, 5, 3)))"));
+console.log(Transcompile("giveSpeech(tax(3, add(5, 9), add(4, 5, 3)))"));

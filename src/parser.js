@@ -22,6 +22,18 @@ var Parser = (function(){
 		},
 		"add":function(args){
 			return args.join(" + ");
+		},
+		"take":function(args){
+			return args.join(" - ");
+		},
+		"jobs":function(args){
+			return args.join(" * ");
+		},
+		"div":function(args){
+			return args.join(" / ");
+		},
+		"giveSpeech":function(args){
+			return "console.log(" + args.join(", ") + ")";
 		}
 	};
 	function Parser(){
