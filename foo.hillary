@@ -1,0 +1,13 @@
+vote foo = 6;
+vote six = "lol";
+for(x, y, z) do none
+tellthepeople(a, b, c, d);
+a tax b tax c
+vote f = $[foo , doo]$
+
+UntilElection(5 != 3) {$ foo $}
+
+SenateBill doo(x){$
+	deport x;
+	do {$$}
+$}
