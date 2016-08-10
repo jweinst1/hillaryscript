@@ -14,10 +14,16 @@ fs.readFile(userArgs[0], 'utf-8', function (err, data) {
     for(var key in funcs) {
     	data = funcs[key](data);
     }
-    data = crpt.corruptor(data);
-    fs.writeFile(userArgs[1], data, function (err) {
+    compiledcode = crpt.corruptor(data);
+
+    fs.writeFile(userArgs[1], compiledcode[0], function (err) {
         if (err) throw err;
-        console.log('Your file has been transcompiled to Javascript');
+        if (compiledcode[1]) {
+        	console.log('Your file has been corrupted by Trump')
+        }
+        else {
+        	console.log('Your file has been transcompiled to Javascript');
+        }
     });
 });
 

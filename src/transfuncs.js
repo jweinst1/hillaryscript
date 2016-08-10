@@ -1,8 +1,41 @@
+var spec = require("./special.js");
+
+//special transcompiler functions
+var transpileObamaFunc = function(code){
+	while(/.*Obama\((.+?)\)/.test(code)){
+		var match = /.*Obama\((.+?)\)/.exec(code)[1];
+		code = code.replace(/Obama\((.+?)\)/, spec.ObamaFunction(match));
+	}
+	return code;
+}
+
+var transpileHillaryFunc = function(code){
+	while(/.*Hillary\((.+?)\)/.test(code)){
+		var match = /.*Hillary\((.+?)\)/.exec(code)[1];
+		code = code.replace(/Hillary\((.+?)\)/, spec.HillaryFunction(match));
+	}
+	return code;
+}
+
+var transpileTrumpFunc = function(code){
+	while(/.*Trump\((.+?)\)/.test(code)){
+		var match = /.*Trump\((.+?)\)/.exec(code)[1];
+		code = code.replace(/Trump\((.+?)\)/, spec.TrumpFunction(match));
+	}
+	return code;
+}
 //transcompiler functions
 
 var transpileVote = function(code){
 	while(/.*vote /.test(code)){
 		code = code.replace(/vote /, "var ");
+	}
+	return code;
+}
+//transpiles ElectionDay to new
+var transpileElectionDay = function(code){
+	while(/.*ElectionDay /.test(code)){
+		code = code.replace(/ElectionDay /, "new ");
 	}
 	return code;
 }
@@ -74,6 +107,14 @@ var transpileArrBrackets = function(code){
 	}
 	return code;
 }
+
+//transpiles ~h~ to / /
+var transpileRegex = function(code){
+	while(/.*~h~/.test(code)){
+		code = code.replace(/~h~/, "/");
+	}
+	return code;
+}
 //transpiles America() to for()
 var transpileAmerica = function(code){
 	while(/.*America\(/.test(code)){
@@ -113,8 +154,9 @@ var transpiletrumpsays = function(code){
 }
 //groups all transcompile functions into an array
 var transCompileFunctions = [transpileCurlyBrackets, transpileArrBrackets, transpileVote, transpileTellThePeople, 
-transpileSenateBill, transpiledeport, transpileUntilElection, transpileAmerica, transpileExecutiveAction, transpileTax, transpileHillAdd
-transpilehillarysays, transpileobamasays, transpiletrumpsays];
+transpileSenateBill, transpiledeport, transpileUntilElection, transpileAmerica, transpileExecutiveAction, transpileTax, transpileHillAdd,
+transpilehillarysays, transpileElectionDay, transpileObamaFunc, transpileobamasays, transpileRegex, transpiletrumpsays,
+transpileHillaryFunc, transpileTrumpFunc];
 
 exports.transCompileFunctions = transCompileFunctions;
 

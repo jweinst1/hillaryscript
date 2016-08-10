@@ -7,7 +7,13 @@ vote f = $[foo , doo]$
 
 UntilElection(5 != 3) {$ foo $}
 
+vote doom = ~h~r.*~h~
+
 SenateBill doo(x){$
 	deport x;
 	do {$$}
 $}
+
+Obama("foooobama")
+Hillary("+:4")
+Trump([1, 2, 3, 4])

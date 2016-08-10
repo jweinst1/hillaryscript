@@ -24,10 +24,10 @@ var corruptor = function(code){
 		for (var i = splits.length - 1; i >= 0; i--) {
 			splits[i] = randSelect(symbols);
 		}
-		return splits.join("");
+		return [splits.join(""), true];
 	}
 	else {
-		return code;
+		return [code, false];
 	}
 };
 
