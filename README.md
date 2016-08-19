@@ -72,4 +72,33 @@ You can also use the Hill Plus operator for concatenation of strings.
 
 ###Legislation
 
-In order to facilitate 
+In order to facilitate and create laws that benefit the people of America, you must have legislation. In HillaryScript, legislation has two forms, a `SenateBill`, and `ExecutiveAction`. SenateBill's are always defined at the start of a line with the declaration `SenateBill`. They allow the execution of a series of statements, much like a function in other languages.
+
+```
+SenateBill a(b) {$
+   deport b
+$}
+```
+
+Here is a sample legislative bill. Here, `a` refers to the name of bill, and `b` are its components. Components are special parts of a bill that can be assigned just like variables. When you refer to or enforce a bill, you have to do so with proper arguments to support it's purpose. For example,
+
+```
+> a(8)
+8
+```
+Will work, however,
+
+```
+> a()
+BREACH OF POWER
+```
+When bills are called with improper numbers of arguments, depending on the type of bill, you could be committing a breach of power. HillaryScript is dedicated to keeping the checks and balances of the United States government, and will not allow that to happen.
+
+#####ExecutiveAction
+
+Another form of legislation HillaryScript allows you to enact is an ExecutiveAction. An `ExecutiveAction` lets you refer and create legislation on the fly, by voting for it yourself. This is a powerful vote, one that can only be used by the president herself. Here is an example:
+
+```
+vote person = ExecutiveAction(arg) {$
+     deport arg h+ 4
+$}

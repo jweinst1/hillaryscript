@@ -1,6 +1,6 @@
 vote foo = 6;
 vote six = "lol";
-for(x, y, z) do none
+America(x, y, z) do none
 tellthepeople(a, b, c, d);
 a tax b tax c
 vote f = $[foo , doo]$
@@ -11,7 +11,6 @@ vote doom = ~h~r.*~h~
 
 SenateBill doo(x){$
 	deport x;
-	do {$$}
 $}
 
 Obama("foooobama")
