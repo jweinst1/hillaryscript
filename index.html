@@ -52,8 +52,13 @@
 <p><code>From the makers of BernieScript...</code></p>
 
 <p><textarea rows="20" cols="50" name="textarea" id="cal"></textarea></p>
-<p><a href="#" class="myButton" onclick="document.getElementById('cal').value = HHHH.Transcompile(document.getElementById('cal').value);">Make it For Hillary</a></p>
-
+<p><a href="#" class="myButton" onclick="processCodeFromText()">Make it For Hillary</a></p>
+<script>
+	function processCodeFromText(){
+		var input = document.getElementById("cal").value;
+		document.getElementById("cal").value = HHHH.Transcompile(input);
+	}
+</script>
 <style>
   #cal {
    background-color:#ffffb3;
