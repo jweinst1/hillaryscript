@@ -14,6 +14,14 @@ To install HillaryScript, you need to have NodeJS installed on your computer. In
 npm install -g hillaryscript
 ```
 
+##Usage
+
+To use Hillaryscript as a commandline tool, simply type the following in your shell
+
+```
+$ hillaryscript YourHillaryScriptFileName.hillary YourDesiredOutputname.js
+```
+
 ##Language Guide
 
 `HillaryScript` is a special language, because instead of using traditional constructs, like `for` loops, it is composed of a set of features far more representative of the principles of democracy, Hillary's campaign, and America.
