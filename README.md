@@ -69,6 +69,21 @@ You can also use the Hill Plus operator for concatenation of strings.
 > "Hillary" h+ "Clinton"
 "HillaryClinton"
 ```
+###Taxes
+
+In HillaryScript, everyone has to pay their taxes. America needs good infratsructure support, 
+###TellThePeople
+
+In order to broadcast messages to the citizens of America in HillaryScript, you must use a special function called `TellThePeople`. It works like this:
+
+```
+> TellThePeople(6, 7)
+6
+7
+
+> TellThePeople("foo")
+foo
+```
 
 ###Legislation
 
@@ -102,3 +117,118 @@ Another form of legislation HillaryScript allows you to enact is an ExecutiveAct
 vote person = ExecutiveAction(arg) {$
      deport arg h+ 4
 $}
+
+```
+These can be referred to and enforced like SenateBills.
+
+###Hillary Quotes:
+
+In HillaryScript, one needs a way of connecting Hillary's message to what the people of America are saying. In most languages, when you want to check if a string matches some pattern, you would use a regular expression.
+
+Regular Expressions cannot capture the mission and hope embedded in Hillary's words. Therefore, we must use a hillary quote, denoted by `~h~` markers. These quotes are used with strings to match and search them:
+
+```
+> ~h~[0-9]+~h~.test("6483785");
+true
+```
+
+###ElectionDay
+
+In HillaryScript, to properly arrange voters, the citizens of America, and the desires they have to change this country, we need to use objects. Objects are collections of keys and values, or in politics we might call them causes and effects. Here is an example of an object:
+
+```
+{$ a:6 $}
+```
+
+Now, say that we want a template for an object like this. How do we do that? We cna use a combo of the power of senate bills with a special keyword, `ElectionDay`. Watch this:
+
+```
+SenateBill foo() {$
+    this.a = 6;
+$}
+
+> vote f = ElectionDay foo();
+> f.a
+6
+```
+Objects are excellent features in HillaryScript for making amazing code and spreading the message of Hillary Clinton!
+
+###SUPER-PAC
+
+A `SUPER-PAC` is a special data structure within HillaryScript, that works very much like arrays in other languages. However, arrays can't really support candidates in elections. We need data structures that will stand by Hillary every step of the way, no matter what happens.
+
+A SUPER-PAC is also always denoted with special brackets, `$[` and `]$`
+
+Here are a few exmaples of what you can do with a SUPER-PAC:
+
+```
+> vote a = $[1, 2, 3]$
+> a[1]
+2
+> a.push(4)
+> a
+$[1, 2, 3, 4]$
+> a.length
+4
+```
+
+SUPER-PAC's can also bee utilized by America to loop through their donations and inspect them, to insure there is no corruption or fraudulent activity going on.
+
+###America
+
+America is an amazing and beautiful country that we all love and cherish. It is the symbol of freedom and liberty to the world. However, America serves a special purpose in HillaryScript. They loop through SUPER-PAC's contents, in order to perform certain governmental actions on them. For example:
+
+```
+America(vote i =0;i<5;i++) {$
+    TellThePeople(i);
+$}
+
+0
+1
+2
+3
+4
+
+```
+
+###HillarySays(Conditionals)
+
+In HillaryScript, we need a way of telling what statements were for, what we additionally support, and what we are absolutely against. To stand in politics requires taking a position on the topics that are meaningful to you. Such as:
+
+```
+hillarysays(5 > 4) {$
+    deport 6
+$} 
+
+obamasays(4 > 3) {$
+   deport 3
+$}
+
+trumpsays {$ 
+   TellThePeople("YYYUUUUUGGGEEEE")
+$}
+```
+
+###Special Legislatures
+
+In HillaryScript, there are a group of special legislations, one which have powers beyond senate voted or house voted bills. They are so unique and powerful, only three of them exist. They are:
+
+`Trump()`
+
+`Obama()`
+
+and of course:
+
+`Hillary()`
+
+Each of them have their own, mysterious, yet inspirational uses that can shape the vision of the American people, in both good or bad ways. Here are a few examples.
+
+*Note*: The Special Legislatures are activated at the time of transcompilation, they aren't direct components of HillaryScript.
+
+```
+> Trump([1, 2, 3, 4])
+["[false","1false",",false"," false","2false",",false"," false","3false",",false"," false","4false","]false"]
+
+>Obama("foooobama")
+["O","Progressive",1,"Hope",1,"(","The Future","f",7,7,7,7,"Progressive",1,"Hope",1,"The Future",")"]
+```

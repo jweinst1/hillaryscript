@@ -16,7 +16,7 @@ picks a random number, and then another random number. If the two are equal to e
 */
 var corruptor = function(code){
 	var symbols = ["*", "$"];
-	var decision = randNumber(1, 50);
+	var decision = randNumber(1, 8);
 	var failure = randNumber(1, 10);
 	if(decision === failure) {
 		var splits = code.split("");
