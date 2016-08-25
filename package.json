@@ -1,0 +1,30 @@
+{
+  "name": "hillaryscript",
+  "version": "1.0.0",
+  "description": "A language dedicated to American values",
+  "main": "src/browsermain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweinst1/hillaryscript.git"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "hillaryscript": "src/Main.js"
+  },
+  "keywords": [
+    "hillary",
+    "clinton",
+    "languages",
+    "compilers",
+    "scripts"
+  ],
+  "author": "Joshua Weinstein <jweinst1@berkeley.edu> (https://github.com/jweinst1)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jweinst1/hillaryscript/issues"
+  },
+  "homepage": "https://github.com/jweinst1/hillaryscript#readme"
+}
