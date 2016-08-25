@@ -4,6 +4,8 @@
 var trsf = require("./transfuncs.js");
 var crpt = require("./corrupter.js");
 
+var funcs = trsf.transCompileFunctions;
+
 var Transcompile = function(code){
 	var data = code;
 	for(var key in funcs) {
